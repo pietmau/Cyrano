@@ -236,10 +236,21 @@ public class CyranoActivity extends Activity implements AudioMethods.AudioComple
         if (currentItem != null) {
             currentItem.pause();
         }
-        
+        AudioMethods.stopTextToSpeech();
         LocalBroadcastManager.getInstance(this).unregisterReceiver(gotFriends);
         
         super.onPause();
+    }
+    
+    
+
+    /**
+     * Called when the application is closed
+     */
+    @Override
+    protected void onDestroy() {
+        stopService(new Intent(this, FriendFinderService.class));
+        super.onDestroy();
     }
     
     /**
