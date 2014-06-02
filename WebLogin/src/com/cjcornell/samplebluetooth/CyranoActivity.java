@@ -254,6 +254,12 @@ public class CyranoActivity extends Activity implements AudioMethods.AudioComple
         
         IntentFilter iff = new IntentFilter(DISPLAY_FRIENDS);
         LocalBroadcastManager.getInstance(this).registerReceiver(gotFriends, iff);
+        //if (currentItem != null) {
+        //    currentItem.pause();
+        // }
+        if (currentItem != null) {
+            currentItem.resume();
+         }
     }
     
     /**

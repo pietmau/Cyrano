@@ -30,7 +30,7 @@ public class AudioMethods {
     private static TextToSpeech tts;
     private static MediaPlayer mp; //Used when playing/streaming audio
     private static boolean isPreparing = false;
-
+    private static int length;
     /**
      * playSound
      *   Plays a sound file (in R.raw.<soundfile-no-extension>) in a provided activity.
@@ -222,9 +222,20 @@ public class AudioMethods {
      */
     public static void pauseMediaPlayer() {
         if (mp != null && mp.isPlaying()) {
+            length=mp.getCurrentPosition();
             mp.pause();
         }
     }
+    /**
+     * Resume the current playing MediaPlayer.
+     */
+    public static void resumeMediaPlayer() {
+        if (mp != null && !mp.isPlaying()) {
+            mp.seekTo(length);
+            mp.start();
+        }
+    }
+    
     
     /**
      * playInstructions

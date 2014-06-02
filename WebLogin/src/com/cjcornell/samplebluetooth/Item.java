@@ -203,5 +203,7 @@ public class Item {
     public void pause() {
         AudioMethods.pauseMediaPlayer();
     }
-    
+    public void resume() {
+        AudioMethods.resumeMediaPlayer();
+    }
 }
