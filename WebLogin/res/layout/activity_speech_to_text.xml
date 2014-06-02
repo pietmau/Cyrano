@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <!-- The title of this page -->
+    <TextView
+        android:id="@+id/sttTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/STTTitle"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:padding="15dp" />
+    
+    <!-- The spoken text -->
+    <TextView
+        android:id="@+id/sttMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sttTitle"
+        android:layout_centerHorizontal="true"
+        android:text="@string/defaultSTTLabel"
+        android:padding="15dp" />
+    
+    <!-- Speech to text button -->
+    <Button 
+	    android:id="@+id/sttButton"
+	    android:layout_width="150dp"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/sttMessage"
+	    android:layout_centerHorizontal="true"
+	    style="@style/AppTheme"
+	    android:text="@string/startSTTButtonText" 
+	    android:onClick="sttButtonClicked" />
+    
+    <!-- Back button -->
+    <Button 
+	    android:id="@+id/ttsBackButton"
+	    android:layout_width="150dp"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/sttButton"
+	    android:layout_centerHorizontal="true"
+	    style="@style/AppTheme"
+	    android:text="@string/backButtonText" 
+	    android:onClick="backButtonClicked" />
+    
+   </RelativeLayout>

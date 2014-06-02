@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <!-- The title of the main page -->
+    <TextView
+        android:id="@+id/mainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/mainTitle"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:padding="15dp" />
+    
+     <!-- Text to Speech button -->
+    <Button 
+	    android:id="@+id/ttsButton"
+	    android:layout_width="150dp"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/mainTitle"
+	    android:layout_centerHorizontal="true"
+	    style="@style/AppTheme"
+	    android:text="@string/ttsButtonText" 
+	    android:onClick="ttsButtonClick" />
+    
+       <!-- Speech to Text Button -->
+       <Button 
+	    android:id="@+id/sttButton"
+	    android:layout_width="150dp"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/ttsButton"
+	    android:layout_centerHorizontal="true"
+	    style="@style/AppTheme"
+	    android:text="@string/sttButtonText" 
+	    android:onClick="sttButtonClick" />
+    
+     <!-- Audio File button -->
+     <Button 
+	    android:id="@+id/audioButton"
+	    android:layout_width="150dp"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/sttButton"
+	    android:layout_centerHorizontal="true"
+	    style="@style/AppTheme"
+	    android:text="@string/audioButtonText" 
+	    android:onClick="audioButtonClick" />
+     
+      <!-- URL Link button -->
+      <Button 
+	    android:id="@+id/urlButton"
+	    android:layout_width="150dp"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/audioButton"
+	    android:layout_centerHorizontal="true"
+	    style="@style/AppTheme"
+	    android:text="@string/urlButtonText" 
+	    android:onClick="urlButtonClick" />
+      
+      <!-- Coaching button -->
+      <Button 
+	    android:id="@+id/coachingButton"
+	    android:layout_width="150dp"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/urlButton"
+	    android:layout_centerHorizontal="true"
+	    style="@style/AppTheme"
+	    android:text="@string/coachingButtonText" 
+	    android:onClick="coachingButtonClick" />
+      
+      <!-- Voice Command button -->
+      <Button 
+	    android:id="@+id/voiceCommandButton"
+	    android:layout_width="150dp"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="@dimen/activity_vertical_margin"
+	    android:layout_below="@id/coachingButton"
+	    android:layout_centerHorizontal="true"
+	    style="@style/AppTheme"
+	    android:text="@string/voiceCommandButtonText" 
+	    android:onClick="voiceCommandButtonClick" />
+
+      <Button
+          android:id="@+id/button2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/button1"
+          android:layout_alignBottom="@+id/button1"
+          android:layout_alignParentRight="true"
+          android:layout_marginRight="31dp"
+          android:onClick="stopScan"
+          android:text="Stop it" />
+
+      <Button
+          android:id="@+id/button1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_marginBottom="14dp"
+          android:layout_marginRight="17dp"
+          android:layout_toLeftOf="@+id/button2"
+          android:onClick="startScan"
+          android:text="Scan for friends" />
+
+</RelativeLayout>

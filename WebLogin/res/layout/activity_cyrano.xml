@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/wrapperLayout" 
+    	      xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent" 
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+              	
+	<!-- This ScrollView is for the main content -->
+	<ScrollView
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent"
+	    android:background="#243c45" >
+	    
+	    <!-- One friend -->
+		<RelativeLayout android:id="@+id/friendContent"
+			  android:layout_width="fill_parent" 
+	          android:layout_height="wrap_content" 
+	          android:orientation="horizontal" 
+	          android:visibility="gone" >
+		    
+		    <ImageView android:id="@+id/friendPicture"
+		    	android:layout_width="wrap_content"
+		    	android:layout_height="wrap_content"
+		    	android:background="@android:color/black" />	
+		    	    	
+		    <TextView android:id="@+id/friendName"
+		        android:layout_toRightOf="@id/friendPicture"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:padding="10dp"
+		        android:textColor="#FFFFFF" />
+		    
+		    <TextView android:id="@+id/friendCoordinates"
+		        android:layout_toRightOf="@id/friendPicture"
+		        android:layout_below="@id/friendName"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerHorizontal="true"
+		        android:paddingLeft="10dp"
+		        android:textColor="#FFFFFF" />
+		</RelativeLayout>
+	</ScrollView>
+	
+	<!-- Anything with potential playback controls -->
+	<LinearLayout
+	    android:id="@+id/mainContent"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical" 
+	    android:visibility="gone" >
+		
+	    <!-- The title to display at the top -->
+	    <TextView android:id="@+id/mainTitle"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:padding="10dp"
+	        android:textColor="#FFFFFF" />	
+		
+	    <!-- The ScrollView to wrap the main section in so it can scroll -->	    	    
+		<ScrollView android:id="@+id/mainInformation"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="0dp"
+		    android:layout_weight="1"
+		    android:background="#243c45" >
+				
+			<!-- The main display for anything with potential playback controls -->
+			<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical" >
+				
+			    <!-- The text to display -->
+			    <TextView android:id="@+id/mainMessage"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:textAppearance="?android:attr/textAppearanceMedium"
+			        android:padding="10dp"
+			        android:textColor="#FFFFFF" />
+			    
+			    <!-- The picture to display, if any -->
+			    <ImageView android:id="@+id/mainPicture"
+			    	android:layout_width="wrap_content"
+			    	android:layout_height="wrap_content"
+			    	android:background="#243c45" />
+			</LinearLayout>
+			
+		</ScrollView>
+		
+		<LinearLayout android:id="@+id/branchControls"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:visibility="gone" >
+
+		    <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+		<Button android:id="@+id/branch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="branchClicked"
+                    android:layout_gravity="center"
+                    android:text="@string/placeholder"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#FFFFFF" 
+                    android:visibility="invisible" />
+		</LinearLayout>
+		<LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+		<Button android:id="@+id/branch2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="branchClicked"
+                    android:layout_gravity="center"
+                    android:text="@string/placeholder"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#FFFFFF" 
+                    android:visibility="invisible" />
+		</LinearLayout>
+		<LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+		<Button android:id="@+id/branch3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="branchClicked"
+                    android:layout_gravity="center"
+                    android:text="@string/placeholder"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#FFFFFF" 
+                    android:visibility="invisible" />
+		</LinearLayout>
+		<LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+		<Button android:id="@+id/branch4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="branchClicked"
+                    android:layout_gravity="center"
+                    android:text="@string/placeholder"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#FFFFFF" 
+                    android:visibility="invisible" />
+		</LinearLayout>
+		</LinearLayout>
+		
+		<!-- Playback Control Buttons -->
+	<LinearLayout android:id="@+id/playbackControls"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:background="#000000"
+		    android:padding="5dp"
+		    android:orientation="horizontal"
+		    android:baselineAligned="false"
+		    android:visibility="gone" >
+			
+		    <!-- Previous -->
+		    <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:orientation="vertical" >
+		    
+			    <Button android:id="@+id/previousButton"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:onClick="previousButtonClicked"
+			        android:layout_gravity="center"
+			        android:text="@string/previousButtonText"
+			        android:textAppearance="?android:attr/textAppearanceSmall"
+			        android:textColor="#FFFFFF" 
+		        	android:visibility="gone" />
+		    </LinearLayout>
+			
+		    <!-- Pause -->
+   		    <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:orientation="vertical" >
+
+			    <Button android:id="@+id/pauseButton"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:onClick="pauseButtonClicked"
+			        android:layout_gravity="center"
+			        android:text="@string/pauseButtonText"
+			        android:textAppearance="?android:attr/textAppearanceSmall"
+			        android:textColor="#FFFFFF"
+		        	android:visibility="gone" />
+	   		</LinearLayout> 
+
+		    <!-- Stop -->
+   		    <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:orientation="vertical" >
+
+			    <Button android:id="@+id/stopButton"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:onClick="stopButtonClicked"
+			        android:layout_gravity="center"
+			        android:text="@string/stopButtonText"
+			        android:textAppearance="?android:attr/textAppearanceSmall"
+			        android:textColor="#FFFFFF"
+		       	 	android:visibility="gone" />
+	   		</LinearLayout> 
+
+		    <!-- Next -->
+		    <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:orientation="vertical" >
+
+			    <Button android:id="@+id/nextButton"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:onClick="nextButtonClicked"
+			        android:layout_gravity="center"
+			        android:text="@string/nextButtonText"
+			        android:textAppearance="?android:attr/textAppearanceSmall"
+			        android:textColor="#FFFFFF"
+		        	android:visibility="gone" />
+	   		</LinearLayout> 
+   		</LinearLayout>
+	</LinearLayout>
+		
+	<!--  Multiple friends -->
+	<RelativeLayout android:id="@+id/friendsContent"
+		  android:layout_width="fill_parent" 
+          android:layout_height="wrap_content"
+          android:orientation="horizontal" 
+          android:background="#243c45" 
+          android:visibility="gone" >
+	
+		<ListView android:id="@+id/friendsList"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textColor="#FFFFFF" />
+
+	</RelativeLayout>
+    
+    <!-- Command groups -->
+    <RelativeLayout android:id="@+id/commandGroupContent"
+          android:layout_width="fill_parent" 
+          android:layout_height="wrap_content"
+          android:orientation="horizontal" 
+          android:background="#243c45" 
+          android:visibility="gone" >
+		
+		<!-- The ListView for command groups -->
+        <ListView android:id="@+id/commandGroups"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/commandGroups" />
+    </RelativeLayout>
+	
+</RelativeLayout>

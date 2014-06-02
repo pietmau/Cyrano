@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+   	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+   	    android:padding="15dp"
+	    android:background="#243c45" >
+	    
+	<LinearLayout 
+	    android:id="@+id/mainLayout"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="15dp"
+	    android:background="#243c45" >
+	   	    	
+	    <!-- Enable or disable terse mode -->
+	    <LinearLayout
+	       android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:orientation="horizontal" >
+		        
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:padding="10dp"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#FFFFFF"
+			    android:text="@string/terseModeLabel" />
+			
+			<View
+		        android:layout_width="0dp"
+		        android:layout_height="0dp"
+		        android:layout_weight="1" /> 
+		
+			<ToggleButton android:id="@+id/terseModeButton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="#FFFFFF"
+		        android:layout_gravity="right" />
+		</LinearLayout>
+		
+	  	<!-- Enable or disable non-friend audio -->
+	    <LinearLayout
+		      android:layout_width="fill_parent"
+		      android:layout_height="wrap_content"
+		      android:orientation="horizontal" >
+		  	        
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:padding="10dp"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#FFFFFF"
+			    android:text="@string/tsAudioLabel" />
+			
+			<View
+		        android:layout_width="0dp"
+		        android:layout_height="0dp"
+		        android:layout_weight="1" /> 
+			
+		  	<ToggleButton android:id="@+id/tsAudioButton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="#FFFFFF"
+		        android:layout_gravity="right" />
+		</LinearLayout>
+		
+	 	<!-- Enable or disable graphical mode -->
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+	        
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:padding="10dp"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#FFFFFF"
+			    android:text="@string/graphicalLabel" />
+			
+			<View
+		        android:layout_width="0dp"
+		        android:layout_height="0dp"
+		        android:layout_weight="1" /> 
+		
+	        <ToggleButton android:id="@+id/graphicalModeButton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="#FFFFFF"
+		        android:layout_gravity="right" />
+		</LinearLayout>
+		
+		<!-- Friend finder option -->
+	 	<LinearLayout
+	       android:layout_width="fill_parent"
+	       android:layout_height="wrap_content"
+	       android:orientation="horizontal" >
+	  	        
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:padding="10dp"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#FFFFFF"
+			    android:text="@string/friendFinderLabel" />
+			
+			<View
+		        android:layout_width="0dp"
+		        android:layout_height="0dp"
+		        android:layout_weight="1" /> 
+			
+			<ToggleButton android:id="@+id/friendFinderButton"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="#FFFFFF"
+				android:layout_gravity="right" />
+		</LinearLayout>
+		
+	    <!-- Enable or disable non-friend audio -->
+	 	<LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+	  	        
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:padding="10dp"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#FFFFFF"
+			    android:text="@string/friendAudioLabel" />
+			
+			<View
+		        android:layout_width="0dp"
+		        android:layout_height="0dp"
+		        android:layout_weight="1" /> 
+			
+	        <ToggleButton android:id="@+id/friendAudioButton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="#FFFFFF"
+		        android:layout_gravity="right" />
+		</LinearLayout>
+		
+		 <!-- Time delay of GPS -->
+		 <LinearLayout
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:orientation="horizontal" >
+		 	        
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:padding="10dp"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#FFFFFF"
+			    android:text="@string/gpsTimeDelayLabelPrefix" />
+			
+		 	<EditText android:id="@+id/gpsDelayText"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="#FFFFFF"
+		        android:inputType="numberDecimal"
+		        android:maxLength="5"
+		        android:hint="" />
+		 	        
+		    <TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:padding="10dp"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#FFFFFF"
+			    android:text="@string/gpsTimeDelayLabelSuffix" />
+		</LinearLayout>
+		
+ 	    <!-- Text size small/med/large -->
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:padding="10dp"
+	            android:text="@string/fontSizeLabel"
+	            android:textAppearance="?android:attr/textAppearanceLarge"
+	            android:textColor="#FFFFFF" />
+	        
+	        <Spinner
+	            android:id="@+id/fontSizeSpinner"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="right"
+	            android:entries="@array/fontSizes" />
+	    </LinearLayout>
+	    
+	    <!-- Max friends to announce -->
+	 	<LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+	  	        
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:padding="10dp"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#FFFFFF"
+			    android:text="@string/maxFriendsLabel" />
+			
+			<View
+		        android:layout_width="0dp"
+		        android:layout_height="0dp"
+		        android:layout_weight="1" /> 
+			
+	        <EditText android:id="@+id/maxFriendsText"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="#FFFFFF"
+		        android:inputType="number"
+		        android:layout_gravity="right" />
+		</LinearLayout>
+		
+	 	<!-- Enable or disable auto display of friends list -->
+	 	<LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+	  	        
+			<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:padding="10dp"
+			    android:textAppearance="?android:attr/textAppearanceLarge"
+			    android:textColor="#FFFFFF"
+			    android:text="@string/autoDisplayFriendsLabel" />
+			
+			<View
+		        android:layout_width="0dp"
+		        android:layout_height="0dp"
+		        android:layout_weight="1" /> 
+			
+	        <ToggleButton android:id="@+id/autoDisplayFriendsButton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="#FFFFFF"
+		        android:layout_gravity="right" />
+		</LinearLayout>
+	    
+	    <Button android:id="@+id/saveSettingsButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="#FFFFFF"
+	        android:onClick="saveSettingsButtonClicked"
+	        android:layout_gravity="center"
+	        android:text="@string/saveSettingsLabel" />
+				
+		<!-- Version Information -->
+	    <TextView
+	        android:id="@+id/versionInfo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:gravity="bottom"
+	        android:layout_gravity="center"
+	        android:text="@string/placeholder"
+	        android:textAppearance="?android:attr/textAppearanceSmall"
+	        android:paddingBottom="8dp"
+	        android:textColor="#FFFFFF" />
+	</LinearLayout>
+</ScrollView>

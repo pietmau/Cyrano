@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="match_parent" 
+	    android:layout_height="match_parent" >
+	    
+	<RelativeLayout 
+	    android:id="@+id/activity_register"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:paddingBottom="@dimen/activity_vertical_margin"
+	    android:paddingTop="@dimen/activity_vertical_margin" >
+	
+	    <!-- The title of the login form -->
+	
+	    <TextView
+	        android:id="@+id/registerTitle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:text="@string/registerTitle"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+	
+	    <!-- The message to appear under the title -->
+	
+	    <TextView
+	        android:id="@+id/registerMsgDefault"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/registerTitle"
+	        android:layout_centerHorizontal="true"
+	        android:text="@string/registerMsgDefault"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	    <!-- The username and password labels and text fields -->
+	
+	    <RelativeLayout
+	        android:id="@+id/usernameAndPassword"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/registerMsgDefault"
+	        android:orientation="horizontal"
+	        android:padding="15dp" >
+	
+	        <!-- First name label -->
+	
+	        <TextView
+	            android:id="@+id/fnameLabel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:padding="@dimen/form_padding"
+	            android:text="@string/fnameLabel"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	        <!-- First name text field -->
+	
+	        <EditText
+	            android:id="@+id/fnameInput"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@id/fnameLabel"
+	            android:ems="10"
+	            android:inputType="textCapWords"
+	            android:padding="@dimen/form_padding" />
+	
+	        <!-- Last name label -->
+	
+	        <TextView
+	            android:id="@+id/lnameLabel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_below="@id/fnameLabel"
+	            android:padding="@dimen/form_padding"
+	            android:text="@string/lnameLabel"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	        <!-- Last name text field -->
+	
+	        <EditText
+	            android:id="@+id/lnameInput"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignLeft="@+id/fnameInput"
+	            android:layout_alignRight="@+id/fnameInput"
+	            android:layout_below="@id/fnameLabel"
+	            android:ems="10"
+	            android:inputType="textCapWords"
+	            android:padding="@dimen/form_padding" />
+	
+	        <!-- Phone number label -->
+	
+	        <TextView
+	            android:id="@+id/pNumLabel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_below="@id/lnameLabel"
+	            android:padding="@dimen/form_padding"
+	            android:text="@string/pnumLabel"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	        <!-- Phone number text field -->
+	
+	        <EditText
+	            android:id="@+id/pNumInput"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignLeft="@+id/lnameInput"
+	            android:layout_alignRight="@+id/lnameInput"
+	            android:layout_below="@id/lnameLabel"
+	            android:ems="10"
+	            android:inputType="phone"
+	            android:padding="@dimen/form_padding" />
+	
+	        <!-- Username label -->
+	
+	        <TextView
+	            android:id="@+id/usernameLabel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_below="@id/pNumLabel"
+	            android:padding="@dimen/form_padding"
+	            android:text="@string/usernameLabel"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	        <!-- Username text field -->
+	
+	        <EditText
+	            android:id="@+id/usernameInput"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignLeft="@+id/pNumInput"
+	            android:layout_alignRight="@+id/pNumInput"
+	            android:layout_below="@id/pNumLabel"
+	            android:ems="10"
+	            android:inputType="text"
+	            android:padding="@dimen/form_padding" />
+	
+	        <!-- Password label -->
+	
+	        <TextView
+	            android:id="@+id/passwordLabel"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_below="@id/usernameLabel"
+	            android:padding="@dimen/form_padding"
+	            android:text="@string/passwordLabel"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	        <!-- Password text field -->
+	
+	        <EditText
+	            android:id="@+id/passwordInput"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignLeft="@+id/usernameInput"
+	            android:layout_alignRight="@+id/usernameInput"
+	            android:layout_below="@id/usernameLabel"
+	            android:ems="10"
+	            android:inputType="textPassword"
+	            android:padding="@dimen/form_padding" />
+	    </RelativeLayout>
+	
+	    <!-- Register button -->
+	
+	    <Button
+	        android:id="@+id/registerButton"
+	        style="@style/AppTheme"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/usernameAndPassword"
+	        android:layout_centerHorizontal="true"
+	        android:onClick="registerButtonClick"
+	        android:text="@string/registerButtonText" />
+	
+	</RelativeLayout>
+</ScrollView>
